@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var url = "https://mehuljain-eval-test.apigee.net/cors-test";
+        $(document).ready(function(){
+          $("button").click(function(){
+            $.ajax({
+                type:"GET",
+                url:url,
+                async:true,
+                dataType: "json",
+                   success: function(json) {
+                      // Parse the response.
+                      // Do other things.
+                   },
+                   error: function(xhr, status, err) {
+                      // This time, we do not end up here!
+                    }
+            });
+          });
+        });
+        </script>
+</body>
+</html>
